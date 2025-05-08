@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Happy 30th Anniversary 💖</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root {
+      --primary-color: #e91e63;
+      --secondary-color: #4a148c;
+      --accent-color: #d4af37;
+      --light-bg: #fff8e1;
+      --pink-bg: #fce4ec;
+    }
+    
+    body {
+      background: linear-gradient(135deg, var(--light-bg), var(--pink-bg));
+      font-family: 'Montserrat', 'Segoe UI', sans-serif;
+      color: var(--secondary-color);
+      overflow-x: hidden;
+    }
+
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Dancing+Script:wght@700&display=swap');
+
+    .hero {
+      text-align: center;
+      padding: 80px 20px 60px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 100%;
+      background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="%23e91e6340"><path d="M30,50 Q50,30 70,50 Q50,70 30,50 Z"/></svg>');
+      background-size: 80px;
+      opacity: 0.1;
+      z-index: -1;
+    }
+
+    .hero h1 {
+      font-size: 3.5rem;
+      animation: heartbeat 1.5s infinite;
+      color: var(--primary-color);
+      font-family: 'Dancing Script', cursive;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 1.3rem;
+      color: #555;
+      max-width: 700px;
+      margin: 0 auto;
+      font-weight: 500;
+    }
+
+    @keyframes heartbeat {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+
+    /* ===== POLAROID GALLERY ===== */
+    .photo-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 30px;
+      padding: 40px;
+    }
+
+    .polaroid {
+      background: white;
+      padding: 15px 15px 40px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      transform: rotate(var(--rotation));
+      transition: all 0.2s ease; /* Faster transition */
+      position: relative;
+      max-width: 300px;
+      margin: 0 auto;
+      opacity: 0; /* Start hidden for animation */
+    }
+
+    .polaroid.animate__fadeIn {
+      opacity: 1; /* Fade in when animated */
+    }
+
+    .polaroid:nth-child(odd) { --rotation: -3deg; }
+    .polaroid:nth-child(even) { --rotation: 3deg; }
+
+    .polaroid:hover {
+      transform: rotate(0deg) scale(1.05);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    }
+
+    .polaroid-img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      display: block;
+      border: 1px solid #eee;
+      transition: transform 0.2s ease; /* Smoother zoom */
+    }
+
+    .polaroid:hover .polaroid-img {
+      transform: scale(1.02);
+    }
+
+    .polaroid-caption {
+      text-align: center;
+      font-family: 'Dancing Script', cursive;
+      font-size: 1.4rem;
+      color: #333;
+      margin-top: 15px;
+      padding: 0 10px;
+    }
+
+    .polaroid::after {
+      content: "";
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      width: 30px;
+      height: 4px;
+      background: rgba(0,0,0,0.1);
+      transform: rotate(45deg);
+    }
+
+    /* ===== MESSAGE SECTION ===== */
+    .message {
+      padding: 50px;
+      text-align: center;
+      font-size: 1.2rem;
+      background-color: rgba(255,255,255,0.8);
+      border-radius: 15px;
+      margin: 40px auto;
+      max-width: 800px;
+      box-shadow: 0 5px 25px rgba(0,0,0,0.05);
+      position: relative;
+      border: 1px solid rgba(233,30,99,0.2);
+      line-height: 1.8;
+    }
+
+    .message::before {
+      content: "";
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      right: 10px;
+      bottom: 10px;
+      border: 1px dashed var(--primary-color);
+      border-radius: 5px;
+      pointer-events: none;
+      opacity: 0.3;
+    }
+
+    .message-signature {
+      font-family: 'Dancing Script', cursive;
+      font-size: 1.8rem;
+      color: var(--primary-color);
+      margin-top: 20px;
+    }
+
+    /* ===== FOOTER ===== */
+    .footer {
+      text-align: center;
+      padding: 30px;
+      background: linear-gradient(135deg, var(--primary-color), #c2185b);
+      font-weight: 500;
+      color: white;
+      position: relative;
+    }
+
+    .footer::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 10px;
+      background: linear-gradient(90deg, transparent, var(--accent-color), transparent);
+    }
+
+    /* ===== BUTTON ===== */
+    .btn-love {
+      background-color: var(--primary-color);
+      color: white;
+      border-radius: 50px;
+      padding: 12px 35px;
+      font-size: 1.1rem;
+      transition: all 0.2s ease; /* Faster button hover */
+      border: none;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+      box-shadow: 0 4px 15px rgba(233,30,99,0.3);
+    }
+
+    .btn-love:hover {
+      background-color: #c2185b;
+      transform: translateY(-3px);
+      box-shadow: 0 7px 20px rgba(233,30,99,0.4);
+    }
+
+    /* ===== FLOATING HEARTS ===== */
+    .floating-hearts {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    .heart {
+      position: absolute;
+      opacity: 0;
+      animation: float 8s linear infinite; /* Faster hearts */
+    }
+
+    @keyframes float {
+      0% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
+      10% { opacity: 0.7; }
+      90% { opacity: 0.7; }
+      100% { transform: translateY(-100px) rotate(360deg); opacity: 0; }
+    }
+
+    /* ===== RESPONSIVE DESIGN ===== */
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 2.5rem; }
+      .photo-grid { grid-template-columns: 1fr; padding: 20px; }
+      .polaroid { max-width: 100%; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Floating Hearts Background -->
+  <div class="floating-hearts" id="hearts-container"></div>
+
+  <!-- Hero Section -->
+  <section class="hero animate__animated animate__fadeIn">
+    <h1>Happy 30th Anniversary <span class="animate__animated animate__heartBeat animate__infinite" style="display: inline-block;">💖</span></h1>
+    <p>1995 – 2025 • Thirty years of love captured in precious moments.</p>
+    <div class="mt-4">
+      <i class="fas fa-heart mx-2" style="color: var(--primary-color);"></i>
+      <i class="fas fa-heart mx-2" style="color: var(--accent-color); font-size: 1.3em;"></i>
+      <i class="fas fa-heart mx-2" style="color: var(--primary-color);"></i>
+    </div>
+  </section>
+
+  <!-- Polaroid Photo Gallery -->
+  <section class="container">
+    <div class="photo-grid">
+      <div class="polaroid animate__animated animate__fadeIn">
+        <img src="images/1.jpg" alt="Wedding day" class="polaroid-img">
+        <div class="polaroid-caption">Our Wedding Day - 1995</div>
+      </div>
+      <div class="polaroid animate__animated animate__fadeIn animate__delay-1s">
+        <img src="images/2.jpg" alt="First child" class="polaroid-img">
+        <div class="polaroid-caption">First Baby - 1998</div>
+      </div>
+      <div class="polaroid animate__animated animate__fadeIn animate__delay-2s">
+        <img src="images/3.jpg" alt="Family trip" class="polaroid-img">
+        <div class="polaroid-caption">10th Anniversary - 2005</div>
+      </div>
+      <div class="polaroid animate__animated animate__fadeIn animate__delay-3s">
+        <img src="images/4.jpg" alt="Family portrait" class="polaroid-img">
+        <div class="polaroid-caption">Family Reunion - 2015</div>
+      </div>
+      <div class="polaroid animate__animated animate__fadeIn animate__delay-4s">
+        <img src="images/5.jpg" alt="Recent photo" class="polaroid-img">
+        <div class="polaroid-caption">30 Years Strong - 2025</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Message Section -->
+  <div class="message animate__animated animate__fadeIn">
+    <p>
+      <span style="font-size: 1.5em; color: var(--primary-color);">❝</span><br>
+      Dearest Mom and Dad,<br><br>
+      Thirty years ago, you began this beautiful journey together. Like these Polaroid memories, your love has developed into something timeless.<br><br>
+      From your wedding day in <strong>1995</strong> to this <strong>30th anniversary in 2025</strong>, your commitment has been our greatest inspiration.<br><br>
+      Thank you for showing us the meaning of unconditional love. Here’s to many more years of happiness!
+    </p>
+    <button class="btn btn-love mt-4" id="loveBtn">
+      With all our love ❤️
+    </button>
+    <div class="message-signature">Your children</div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer animate__animated animate__fadeInUp">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h5><i class="fas fa-camera-retro mr-2"></i> Celebrating 30 Years • 1995 – 2025</h5>
+          <p>June 12, 1995 - June 12, 2025</p>
+        </div>
+      </div>
+      <hr style="border-color: rgba(255,255,255,0.2); margin: 20px auto; width: 50%;">
+      <p class="mb-0">— With love from your family 💞 —</p>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Create floating hearts
+    function createHearts() {
+      const container = document.getElementById('hearts-container');
+      const colors = ['#e91e63', '#ff4081', '#f50057', '#ff80ab', '#d4af37'];
+      
+      for (let i = 0; i < 15; i++) {
+        const heart = document.createElement('div');
+        heart.classList.add('heart');
+        heart.innerHTML = '❤️';
+        heart.style.left = Math.random() * 100 + 'vw';
+        heart.style.fontSize = (Math.random() * 20 + 10) + 'px';
+        heart.style.animationDuration = (Math.random() * 6 + 3) + 's'; // Faster hearts
+        heart.style.animationDelay = (Math.random() * 3) + 's';
+        container.appendChild(heart);
+      }
+    }
+    
+    // Initialize
+    document.addEventListener('DOMContentLoaded', () => {
+      createHearts();
+      
+      // Animate Polaroids on scroll
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate__animated', 'animate__fadeIn');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1 });
+      
+      document.querySelectorAll('.polaroid').forEach(el => {
+        observer.observe(el);
+      });
+    });
+  </script>
+</body>
+</html>
