@@ -8,14 +8,6 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
-    /* :root {
-      --primary-color: #e91e63;
-      --secondary-color: #4a148c;
-      --accent-color: #d4af37;
-      --light-bg: #fff8e1;
-      --pink-bg: #fce4ec;
-    } */
-    
     :root {
       --primary-color: #FF6B6B; /* Coral pink */
       --secondary-color: #F8F9FA; /* Light text */
@@ -25,7 +17,6 @@
     }
 
     body {
-      /* background: linear-gradient(135deg, var(--light-bg), var(--pink-bg)); */
       background: linear-gradient(135deg, var(--light-bg), var(--pink-bg));
       color: var(--secondary-color);
       font-family: 'Montserrat', 'Segoe UI', sans-serif;
@@ -65,7 +56,6 @@
 
     .hero p {
       font-size: 1.3rem;
-      /* color: #555; */
       color: var(--secondary-color);
       max-width: 700px;
       margin: 0 auto;
@@ -117,41 +107,41 @@
     } */
 
     /* ===== POLAROID GALLERY ===== */
-.polaroid {
-  background: white;
-  padding: 15px 15px 40px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-  transform: rotate(var(--rotation));
-  transition: all 0.2s ease;
-  position: relative;
-  max-width: 400px;
-  margin: 0 auto;
-  opacity: 0;
-  /* height: 400px;  */
-  display: flex; 
-  flex-direction: column; 
-  justify-content: center; 
-  align-items: center; 
-}
+    .polaroid {
+      background: white;
+      padding: 15px 15px 40px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      transform: rotate(var(--rotation));
+      transition: all 0.2s ease;
+      position: relative;
+      max-width: 400px;
+      margin: 0 auto;
+      opacity: 0;
+      /* height: 400px;  */
+      display: flex; 
+      flex-direction: column; 
+      justify-content: center; 
+      align-items: center; 
+    }
 
-.polaroid-img {
-  width: 90%; /* Slightly smaller to account for padding */
-  height: auto; /* Let height adjust naturally */
-  max-height: 300px; /* Prevent images from being too tall */
-  object-fit: contain; /* Show entire image without cropping */
-  border: 1px solid #eee;
-  transition: transform 0.2s ease;
-}
+    .polaroid-img {
+      width: 90%; /* Slightly smaller to account for padding */
+      height: auto; /* Let height adjust naturally */
+      max-height: 300px; /* Prevent images from being too tall */
+      object-fit: contain; /* Show entire image without cropping */
+      border: 1px solid #eee;
+      transition: transform 0.2s ease;
+    }
 
-.polaroid-caption {
-  text-align: center;
-  font-family: 'Dancing Script', cursive;
-  font-size: 1.4rem;
-  color: #333;
-  margin-top: 20px; /* Space between image and caption */
-  padding: 0 10px;
-  width: 100%; /* Take full width */
-}
+    .polaroid-caption {
+      text-align: center;
+      font-family: 'Dancing Script', cursive;
+      font-size: 1.4rem;
+      color: #333;
+      margin-top: 20px; /* Space between image and caption */
+      padding: 0 10px;
+      width: 100%; /* Take full width */
+    }
 
     .polaroid.animate__fadeIn {
       opacity: 1; /* Fade in when animated */
@@ -347,27 +337,27 @@
         <div class="polaroid-caption">30 Years Strong - 2025</div>
       </div>
       <div class="polaroid animate__animated animate__fadeIn animate__delay-5s">
-        <img src="images/6.JPG" alt="Recent photo" class="polaroid-img">
+        <img src="images/6.jpg" alt="Recent photo" class="polaroid-img">
         <div class="polaroid-caption">Forever in Love - 2025</div>
       </div>
       <div class="polaroid animate__animated animate__fadeIn animate__delay-6s">
-        <img src="images/7.JPG" alt="Recent photo" class="polaroid-img">
+        <img src="images/7.jpg" alt="Recent photo" class="polaroid-img">
         <div class="polaroid-caption">Family Vacation - 2025</div>
       </div>
       <div class="polaroid animate__animated animate__fadeIn animate__delay-7s">
-        <img src="images/8.JPG" alt="Recent photo" class="polaroid-img">
+        <img src="images/8.jpg" alt="Recent photo" class="polaroid-img">
         <div class="polaroid-caption">Celebrating Love - 2025</div>
       </div>
       <div class="polaroid animate__animated animate__fadeIn animate__delay-8s">
-        <img src="images/9.JPG" alt="Recent photo" class="polaroid-img">
+        <img src="images/9.jpg" alt="Recent photo" class="polaroid-img">
         <div class="polaroid-caption">Cheers to 30 Years - 2025</div>
       </div>
       <div class="polaroid animate__animated animate__fadeIn animate__delay-9s">
-        <img src="images/10.JPG" alt="Recent photo" class="polaroid-img">
+        <img src="images/10.jpg" alt="Recent photo" class="polaroid-img">
         <div class="polaroid-caption">Family Gathering - 2025</div>
       </div>
       <div class="polaroid animate__animated animate__fadeIn animate__delay-10s">
-        <img src="images/11.JPG" alt="Recent photo" class="polaroid-img">
+        <img src="images/11.jpg" alt="Recent photo" class="polaroid-img">
         <div class="polaroid-caption">Love Always Wins - 2025</div>
       </div>
     </div>
