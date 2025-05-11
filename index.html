@@ -73,48 +73,29 @@
       grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
       gap: 30px;
       padding: 40px;
-    }
-/* 
-    .polaroid {
-      background: white;
-      padding: 15px 15px 40px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-      transform: rotate(var(--rotation));
-      transition: all 0.2s ease;
-      position: relative;
-      max-width: 300px;
-      margin: 0 auto;
-      opacity: 0; 
+      justify-items: center;
+      justify-content: center; /* Add this to center the grid columns */
     }
 
-    .polaroid-img {
-      height: 350px;
-      width: 100%;
-      object-fit: cover;
-      display: block;
-      border: 1px solid #eee;
-      transition: transform 0.2s ease;
+    .photo-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      padding: 40px;
     }
-
     
-    .polaroid-caption {
-      text-align: center;
-      font-family: 'Dancing Script', cursive;
-      font-size: 1.4rem;
-      color: #333;
-      margin-top: 15px;
-      padding: 0 10px;
-    } */
-
     /* ===== POLAROID GALLERY ===== */
     .polaroid {
+      flex: 0 0 280px; /* Fixed width */
+      max-width: 280px;
       background: white;
-      padding: 15px 15px 40px;
+      padding: 15px 15px 15px;
       box-shadow: 0 4px 15px rgba(0,0,0,0.1);
       transform: rotate(var(--rotation));
       transition: all 0.2s ease;
       position: relative;
-      max-width: 400px;
+      
       margin: 0 auto;
       opacity: 0;
       /* height: 400px;  */
@@ -151,14 +132,12 @@
     .polaroid:nth-child(even) { --rotation: 1deg; }
 
     .polaroid:hover {
-      transform: rotate(0deg) scale(1.05);
+      transform: rotate(0deg) scale(1.07);
       box-shadow: 0 10px 25px rgba(0,0,0,0.15);
     }
 
-    
-
     .polaroid:hover .polaroid-img {
-      transform: scale(1.07);
+      transform: scale(1.05);
     }
     
     .polaroid::after {
@@ -293,6 +272,8 @@
         font-size: 1.1rem;
       }
     }
+
+
   </style>
 </head>
 <body>
@@ -318,47 +299,123 @@
     <div class="photo-grid">
       <div class="polaroid animate__animated animate__fadeIn">
         <img src="images/1.JPG" alt="Wedding day" class="polaroid-img">
-        <div class="polaroid-caption">Our Wedding Day - 1995</div>
+        <div class="polaroid-caption">Wedding Day</div>
       </div>
-      <div class="polaroid animate__animated animate__fadeIn animate__delay-1s">
-        <img src="images/2.JPG" alt="First child" class="polaroid-img">
-        <div class="polaroid-caption">First Baby - 1998</div>
+      <div class="polaroid animate__animated animate__fadeIn ">
+        <img src="images/2.JPG" alt="" class="polaroid-img">
+        <div class="polaroid-caption">12 May, 1995</div>
       </div>
-      <div class="polaroid animate__animated animate__fadeIn animate__delay-2s">
-        <img src="images/3.JPG" alt="Family trip" class="polaroid-img">
-        <div class="polaroid-caption">10th Anniversary - 2005</div>
+      <div class="polaroid animate__animated animate__fadeIn ">
+        <img src="images/3.JPG" alt="" class="polaroid-img">
+        <div class="polaroid-caption">Just Married</div>
       </div>
-      <div class="polaroid animate__animated animate__fadeIn animate__delay-3s">
-        <img src="images/4.JPG" alt="Family portrait" class="polaroid-img">
-        <div class="polaroid-caption">Family Reunion - 2015</div>
+      <div class="polaroid animate__animated animate__fadeIn ">
+        <img src="images/4.JPG" alt="" class="polaroid-img">
+        <div class="polaroid-caption">Hum do hamare do !!</div>
       </div>
-      <div class="polaroid animate__animated animate__fadeIn animate__delay-4s">
+      <div class="polaroid animate__animated animate__fadeIn ">
         <img src="images/5.JPG" alt="Recent photo" class="polaroid-img">
         <div class="polaroid-caption">30 Years Strong - 2025</div>
       </div>
-      <div class="polaroid animate__animated animate__fadeIn animate__delay-5s">
+      <div class="polaroid animate__animated animate__fadeIn ">
         <img src="images/6.jpg" alt="Recent photo" class="polaroid-img">
         <div class="polaroid-caption">Forever in Love - 2025</div>
       </div>
-      <div class="polaroid animate__animated animate__fadeIn animate__delay-6s">
+      <div class="polaroid animate__animated animate__fadeIn ">
         <img src="images/7.jpg" alt="Recent photo" class="polaroid-img">
         <div class="polaroid-caption">Family Vacation - 2025</div>
       </div>
-      <div class="polaroid animate__animated animate__fadeIn animate__delay-7s">
+      <div class="polaroid animate__animated animate__fadeIn ">
         <img src="images/8.jpg" alt="Recent photo" class="polaroid-img">
         <div class="polaroid-caption">Celebrating Love - 2025</div>
       </div>
-      <div class="polaroid animate__animated animate__fadeIn animate__delay-8s">
+      <div class="polaroid animate__animated animate__fadeIn ">
         <img src="images/9.jpg" alt="Recent photo" class="polaroid-img">
         <div class="polaroid-caption">Cheers to 30 Years - 2025</div>
       </div>
-      <div class="polaroid animate__animated animate__fadeIn animate__delay-9s">
+      <div class="polaroid animate__animated animate__fadeIn ">
         <img src="images/10.jpg" alt="Recent photo" class="polaroid-img">
         <div class="polaroid-caption">Family Gathering - 2025</div>
       </div>
-      <div class="polaroid animate__animated animate__fadeIn animate__delay-10s">
+      <div class="polaroid animate__animated animate__fadeIn ">
         <img src="images/11.jpg" alt="Recent photo" class="polaroid-img">
         <div class="polaroid-caption">Love Always Wins - 2025</div>
+      </div>
+      <div class="polaroid animate__animated animate__fadeIn ">
+        <img src="images/12.jpg" alt="Recent photo" class="polaroid-img">
+        <div class="polaroid-caption">Together Forever - 2025</div>
+      </div>
+      <div class="polaroid animate__animated animate__fadeIn ">
+        <img src="images/13.jpg" alt="Recent photo" class="polaroid-img">
+        <div class="polaroid-caption">Family Love - 2025</div>
+      </div>
+      <div class="polaroid animate__animated animate__fadeIn ">
+        <img src="images/14.jpg" alt="Recent photo" class="polaroid-img">
+        <div class="polaroid-caption">Love in Every Moment - 2025</div>
+      </div>
+      <div class="polaroid animate__animated animate__fadeIn ">
+        <img src="images/15.jpg" alt="Recent photo" class="polaroid-img">
+        <div class="polaroid-caption">Cheers to Love - 2025</div>
+      </div>
+      <div class="polaroid animate__animated animate__fadeIn ">
+        <img src="images/16.jpg" alt="Recent photo" class="polaroid-img">
+        <div class="polaroid-caption">OMG !!! What a pose 😮</div>
+      </div>
+      <div class="polaroid animate__animated animate__fadeIn ">
+        <img src="images/17.jpg" alt="Recent photo" class="polaroid-img">
+        <div class="polaroid-caption">First Scooter 🛵</div>
+      </div>
+      <div class="polaroid animate__animated animate__fadeIn ">
+        <img src="images/18.jpg" alt="Recent photo" class="polaroid-img">
+        <div class="polaroid-caption">Beyond 50 looking 20</div>
+      </div>
+      <div class="polaroid animate__animated animate__fadeIn ">
+        <img src="images/19.jpg" alt="Recent photo" class="polaroid-img">
+        <div class="polaroid-caption">Love in Every Moment - 2025</div>
+      </div>
+      <div class="polaroid animate__animated animate__fadeIn ">
+        <img src="images/20.jpg" alt="Recent photo" class="polaroid-img">
+        <div class="polaroid-caption">Family Bonding - 2025</div>
+      </div>
+      <div class="polaroid animate__animated animate__fadeIn ">
+        <img src="images/21.jpg" alt="Recent photo" class="polaroid-img">
+        <div class="polaroid-caption">Love in Every Moment - 2025</div>
+      </div>
+      <div class="polaroid animate__animated animate__fadeIn ">
+        <img src="images/22.jpg" alt="Recent photo" class="polaroid-img">
+        <div class="polaroid-caption">25th Anniversary</div>
+      </div>
+      <div class="polaroid animate__animated animate__fadeIn ">
+        <img src="images/23.jpg" alt="Recent photo" class="polaroid-img">
+        <div class="polaroid-caption">Love in Every Moment - 2025</div>
+      </div>
+      <div class="polaroid animate__animated animate__fadeIn ">
+        <img src="images/24.jpg" alt="Recent photo" class="polaroid-img">
+        <div class="polaroid-caption">Beyond 50 looking 20</div>
+      </div>
+      <div class="polaroid animate__animated animate__fadeIn ">
+        <img src="images/25.jpg" alt="Recent photo" class="polaroid-img">
+        <div class="polaroid-caption">27th Anniversary</div>
+      </div>
+      <div class="polaroid animate__animated animate__fadeIn ">
+        <img src="images/26.jpg" alt="Recent photo" class="polaroid-img">
+        <div class="polaroid-caption">Family Bonding - 2025</div>
+      </div>
+      <div class="polaroid animate__animated animate__fadeIn ">
+        <img src="images/27.jpg" alt="Recent photo" class="polaroid-img">
+        <div class="polaroid-caption">Love in Every Moment - 2025</div>
+      </div>
+      <div class="polaroid animate__animated animate__fadeIn ">
+        <img src="images/28.jpg" alt="Recent photo" class="polaroid-img">
+        <div class="polaroid-caption">Family Bonding - 2025</div>
+      </div>
+      <div class="polaroid animate__animated animate__fadeIn ">
+        <img src="images/29.jpg" alt="Recent photo" class="polaroid-img">
+        <div class="polaroid-caption">Are you even aging?</div>
+      </div>
+      <div class="polaroid animate__animated animate__fadeIn ">
+        <img src="images/30.jpg" alt="Recent photo" class="polaroid-img">
+        <div class="polaroid-caption">Family Bonding - 2025</div>
       </div>
     </div>
   </section>
